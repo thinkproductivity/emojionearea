@@ -3,7 +3,7 @@
  * https://github.com/mervick/emojionearea
  * Copyright Andrey Izman and other contributors
  * Released under the MIT license
- * Date: 2018-12-20T11:58Z
+ * Date: 2018-12-20T14:02Z
  */
 window = ( typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {} );
 document = window.document || {};
@@ -237,7 +237,8 @@ document = window.document || {};
             recentEmojis      : true,
             textcomplete: {
                 maxCount      : 15,
-                placement     : null // null - default | top | absleft | absright
+                placement     : null, // null - default | top | absleft | absright
+                appendTo      : 'body'
             },
             noResultsText     : 'No results found'
         };
@@ -1460,7 +1461,8 @@ document = window.document || {};
             var autocomplete = function() {
                 var textcompleteOptions = {
                     maxCount: options.textcomplete.maxCount,
-                    placement: options.textcomplete.placement
+                    placement: options.textcomplete.placement,
+                    appendTo: options.textcomplete.appendTo,
                 };
 
                 if (options.shortcuts) {
