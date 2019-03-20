@@ -474,7 +474,7 @@ function($, emojione, blankImg, slice, css_class, emojioneSupportMode, invisible
                 self.search.val('');
                 window.setTimeout(function() {
                     self.trigger('search.keypress', true);
-                }, 50);
+                }, 100);
             }
         });
 
